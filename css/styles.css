@@ -206,6 +206,7 @@ address {
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 600;
   top: 0;
   left: 0;
   background-color: #fcfcfc;
@@ -213,8 +214,7 @@ address {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 600;
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .mobile-menu.is-open {
@@ -290,6 +290,7 @@ address {
 
 .soc-icon-list.soc-icon-mobile-menu {
   gap: 40px;
+  justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -678,6 +679,7 @@ address {
 
 .portfolio-item {
   width: 100%;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -716,6 +718,7 @@ address {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   padding: 32px 16px;
+
 }
 
 .portfolio-item:hover,
@@ -927,7 +930,7 @@ address {
     margin-right: 0;
   }
   .footer-container {
-    padding: 0 104px;
+    padding: 0 108px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -940,6 +943,7 @@ address {
   }
   .short-call {
     margin-right: 24px;
+    align-items: flex-start;
   }
   .footer-text {
     max-width: 264px;
@@ -1167,10 +1171,11 @@ address {
 }
 
 .accept-description {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
-.accept-description span {
+.accept-description .checkspan {
   align-items: center;
   width: 16px;
   height: 16px;
@@ -1200,20 +1205,17 @@ address {
     display: inline;
   }
 
-  .accept-checkbox:checked + .accept-description span {
+  .accept-checkbox:checked + .accept-description .checkspan {
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
   }
   
-  .accept-checkbox:focus + .accept-description span {
+  .accept-checkbox:focus + .accept-description .checkspan {
     border-color: #4d5ae5;
   }
 
-  .accept-checkbox:focus + .accept-description span {
-    border-color: #4d5ae5;
-  }
-
+  
 
 /* .accept-description {
   display: flex;
