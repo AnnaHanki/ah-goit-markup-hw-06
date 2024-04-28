@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
@@ -221,7 +225,6 @@ address {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-  /* visibility: hidden; */
 }
 
 .modal-close-btn.mobile-close-btn {

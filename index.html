@@ -60,7 +60,7 @@
           </ul>
         </address>
 
-        <button class="header-burger" type="button" data-mobile-menu-open>
+        <button class="header-burger js-open-menu" type="button">
           <svg class="burger-button-icon" width="17" height="15">
             <use href="./images/icons.svg#burger-button-icon"></use>
           </svg>
@@ -69,11 +69,10 @@
 
       <!-- ================================ MOBILE MENU ==============================-->
 
-      <div class="mobile-menu" data-mobile-data-menu>
+      <div class="mobile-menu js-menu-container">
         <div class="mobile-menu-wrap">
           <button
-            class="modal-close-btn mobile-close-btn"
-            data-mobile-menu-close
+            class="modal-close-btn mobile-close-btn js-close-menu"
             type="button"
           >
             <svg class="modal-close-icons" width="8" height="8">
@@ -86,7 +85,7 @@
                 <a class="mobile-list-link" href="./index.html">Studio</a>
               </li>
               <li class="mobile-list-item">
-                <a class="mobile-list-link" href="#portfolio">Portfolio</a>
+                <a class="mobile-list-link mobile-modal-link" href="#portfolio">Portfolio</a>
               </li>
               <li class="mobile-list-item">
                 <a class="mobile-list-link" href="">Contacts</a>
@@ -151,7 +150,7 @@
       <section class="hero-title-section section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-title-button">Order Service</button>
+          <button type="button" class="hero-title-button" data-modal-open>Order Service</button>
         </div>
       </section>
 
@@ -501,7 +500,7 @@
       </section>
 
       <!--========================================= FOURTH SECTION ============================================-->
-      <section class="portfolio-section section">
+      <section id="portfolio" class="portfolio-section section">
         <div class="container">
           <h2 class="portfolio-title second-title for-titles">Our Portfolio</h2>
 
@@ -879,9 +878,9 @@
     </footer>
 
     <!--========================================= MODAL WINDOW ============================================-->
-    <div class="backdrop">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icons" width="8" height="8">
             <use href="./images/icons.svg#modal-close-icon"></use>
           </svg>
@@ -970,5 +969,15 @@
         </form>
       </div>
     </div>
+<!-- to block body vid scroll -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mob-menu.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
   </body>
 </html>
